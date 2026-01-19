@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UBA_RED, UBA_WHITE } from '../utils/constants';
+import logo from '../image/logo.png';
 import { Home, Users, BarChart3, LogOut, Shield } from 'lucide-react';
 
 const Navbar = ({ userType = 'customer' }) => {
@@ -49,7 +50,7 @@ const Navbar = ({ userType = 'customer' }) => {
           }}
           onClick={() => navigate('/')}
         >
-          UBA
+          <img src={logo} alt="UBA Logo" style={{ height: '40px' }} />
         </div>
         <div style={{ display: 'flex', gap: '24px' }}>
           {items.map((item) => {
